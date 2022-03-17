@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formularios</title>
+	</head>
+	<body>
+		<form method="post">
+			<fieldset>
+				<legend>Dados pessoais</legend>
+				<label for="nome">Nome</label>
+				<input id="nome" type="text" />
+				<label for="nascimento">Data de nascimento</label>
+				<input id="nascimento" type="date" />
+				<label for="local-nascimento">Local de nascimento</label>
+				<select name="local_nascimento" id="local-nascimento">
+					<optgroup label="Ceará">
+						<option value="FOR">Fortaleza</option>
+						<option value="CAU">Caucaia</option>
+						<option value="MAR">Maracanaú</option>
+					</optgroup>
+					<optgroup label="Rio grande do norte">
+						<option value="NAT">Natal</option>
+					</optgroup>
+				</select>
+			</fieldset>
+			<fieldset>
+				<legend>Dados profissionais</legend>
+				<label for="graduado">Graduado</label>
+				<input type="radio" name="formacao" id="graduado" />
+				<label for="pos-graduado">Pós-graduado</label>
+				<input type="radio" name="formacao" id="pos-graduado" />
+				<label for="mestre">Mestre</label>
+				<input type="radio" name="formacao" id="mestre" />
+				<label for="doutor">Doutor</label>
+				<input type="radio" name="formacao" id="doutor" />
+				<div>
+					<label for="ingles">Nível de inglês</label>
+					<input
+						type="range"
+						min="0"
+						max="5"
+						name="nivel-ingles"
+						id="ingles"
+						list="tickmarks"
+					/>
+					<datalist id="tickmarks">
+						<option value="0"></option>
+						<option value="1"></option>
+						<option value="2"></option>
+						<option value="3"></option>
+						<option value="4"></option>
+						<option value="5"></option>
+					</datalist>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Dados acadêmicos</legend>
+				<label for="html">HTML</label>
+				<input type="checkbox" name="html" id="html" />
+				<label for="css">CSS</label>
+				<input type="checkbox" name="css" id="css" />
+				<label for="javascript">JavaScript</label>
+				<input type="checkbox" name="javascript" id="javascript" />
+				<label for="php">PHP</label>
+				<input type="checkbox" name="php" id="php" />
+			</fieldset>
+			<input type="submit" value="enviar" />
+		</form>
+	</body>
+</html>
