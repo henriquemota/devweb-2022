@@ -1,0 +1,16 @@
+body {
+	font-size: 1em;
+	font-family: sans-serif;
+	background-color: white;
+	background-image: url('https://img.freepik.com/vetores-gratis/fundo-abstrato-azul-formas-geometricas_1035-17545.jpg');
+	background-repeat: repeat-y;
+}
+h1 + p {
+	font-family: monospace;
+	border-top: 2px dotted red;
+	border-left: 2px dotted red;
+	padding: 16px;
+}
+p {
+	text-align: justify;
+}
