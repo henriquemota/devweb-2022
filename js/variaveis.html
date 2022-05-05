@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script>
+			function formatData() {
+				let data = document.form.conteudo.value
+				const dv = document.getElementById('div-conteudo')
+				dv.innerHTML = data.toUpperCase()
+			}
+		</script>
+	</head>
+	<body>
+		<form name="form">
+			<textarea name="conteudo" rows="10"></textarea>
+			<button type="button" onclick="formatData()">clique aqui</button>
+			<div id="div-conteudo"></div>
+		</form>
+	</body>
+</html>
