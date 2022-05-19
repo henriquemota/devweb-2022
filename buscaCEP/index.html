@@ -16,6 +16,7 @@
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 			crossorigin="anonymous"
 		/>
+		<script src="./funcoes.js"></script>
 		<title>BuscaCEP.app</title>
 	</head>
 	<body>
@@ -31,13 +32,16 @@
 						type="button"
 						class="btn btn-success"
 						value="Encontrar endereço"
+						onclick="buscaCEP()"
 					/>
 				</div>
 			</div>
 
 			<div class="card mt-5">
 				<div class="card-header">Endereço localizado</div>
-				<div class="card-body">Dados do endereço</div>
+				<div class="card-body">
+					<pre id="response"></pre>
+				</div>
 			</div>
 		</main>
 	</body>
