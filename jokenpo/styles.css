@@ -1,0 +1,8 @@
+img {
+	width: 25vw;
+	border: 1px dotted #ff0000;
+	border-radius: 8px;
+}
+img:hover {
+	cursor: pointer;
+}
