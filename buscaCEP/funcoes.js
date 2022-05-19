@@ -3,9 +3,10 @@ const buscaCEP = async () => {
 	try {
 		const input = document.getElementById('cep')
 		pre.innerHTML = 'Aguarde...'
-		const { status, data } = await axios.get(
+		const { status, data, ...rest } = await axios.get(
 			`https://viacep.com.br/ws/${input.value}/json/`
 		)
+
 		if (Number(status) === 200) {
 			const { logradouro, complemento, bairro, localidade, uf, ddd } = data
 			pre.innerHTML = `
@@ -17,7 +18,7 @@ const buscaCEP = async () => {
         DDD: ${ddd}<br />
       `
 		} else {
-			pre.innerHTML = ''
+			pre.innerHTML = 'Endereço não localizado.'
 		}
 	} catch (error) {
 		pre.innerHTML = ''
