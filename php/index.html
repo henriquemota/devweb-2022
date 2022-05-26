@@ -8,25 +8,30 @@
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 		<script>
-			document.addEventListener('DOMContentLoaded', function (e) {
-				const dados = document.getElementById('dados')
-
-				axios.get('./data.php').then(({ data }) =>
-					data.forEach((e) => {
-						const option = document.createElement('option')
-						option.value = e
-						option.text = e
-						dados.add(option)
-					})
-				)
-			})
+			// document.addEventListener('DOMContentLoaded', function (e) {
+			// 	const dados = document.getElementById('dados')
+			// 	axios.get('./data.php').then(({ data }) =>
+			// 		data.forEach((e) => {
+			// 			const option = document.createElement('option')
+			// 			option.value = e
+			// 			option.text = e
+			// 			dados.add(option)
+			// 		})
+			// 	)
+			// })
 		</script>
 	</head>
 	<body>
-		<form action="./form.php">
-			<select id="dados" name="'opcao">
-				<option value=""></option>
-			</select>
+		<form action="./validate.php" method="post">
+			<label for="login">Login</label>
+			<input id="login" type="text" name="login" />
+			<label for="senha">Senha</label>
+			<input id="senha" type="password" name="senha" />
+			<!-- 
+        <select id="dados" name="opcao">
+				<option value="">selecione</option>
+			</select> 
+      -->
 			<button type="submit">enviar</button>
 		</form>
 	</body>

@@ -7,6 +7,9 @@
   <title>Document</title>
 </head>
 <body>
-  o item selecionado foi <?php echo $_GET['opcao'] ?>
+  <p>o item selecionado foi <?php echo $_POST['opcao'] ?></p>
+  <p>a cor selecionada foi <?php echo $_POST['cor'] ?></p>
+
+  
 </body>
 </html>
