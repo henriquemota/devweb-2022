@@ -8,6 +8,11 @@
 </head>
 <body>
   <h1>Primeira página em php</h1>
-  a soma de 1 + 1 é <?echo  1 + 1; ?>
+  <p>a soma de 1 + 1 é <?php echo  1 + 1; ?></p>
+  <?php
+    for ($i=0; $i < 100; $i++) { 
+      echo "<p>linha número ". $i ."</p>";
+    }
+  ?>
 </body>
 </html>
