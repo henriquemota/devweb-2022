@@ -1,45 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-			crossorigin="anonymous"
-		/>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-			crossorigin="anonymous"
-		></script>
-		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<title>PDV || Ponto de venda</title>
-	</head>
-	<body>
-		<div class="container">
-		<h1>Nossos produtos</h1>
-		<?
-			$data = [
-				array('id' => 1, 'nome' => 'banana', 'valor' => 7.5),
-				array('id' => 2, 'nome' => 'maçã', 'valor' => 4.5),
-				array('id' => 3, 'nome' => 'pera', 'valor' => 2.5),
-				array('id' => 4, 'nome' => 'goiaba', 'valor' => 3.5),
-			];
-		?>
-			<div class="row" id="linha">
-				<? foreach ($data as $item):  ?>
-					<div class="col-sm-4">
-						<div class="card my-2">
-							<div class="card-body">
-								<?= $item['nome'];?>
-							</div>
-						</div>
+<? include('./partials/header.php'); ?>
+<?
+	$data = [
+		array('id' => 1, 'nome' => 'banana', 'valor' => 7.5, 'foto' => 'https://d3ugyf2ht6aenh.cloudfront.net/stores/746/397/products/banana_caturra1-7e2b9a3f6b39b3309915220270001382-1024-1024.jpg'),
+		array('id' => 2, 'nome' => 'maçã', 'valor' => 4.5, 'foto' => 'https://hiperideal.vteximg.com.br/arquivos/ids/167706/56383.jpg?v=636615816296530000'),
+		array('id' => 3, 'nome' => 'pera', 'valor' => 2.5, 'foto' => 'https://static9.depositphotos.com/1642482/1148/i/450/depositphotos_11489464-stock-photo-pears.jpg'),
+		array('id' => 4, 'nome' => 'goiaba', 'valor' => 3.5, 'foto' => 'https://s1.static.brasilescola.uol.com.br/be/conteudo/images/fruto-polpa-rosada-apta-para-consumo-537e5dda94063.jpg'),
+	];
+?>
+<div class="container">
+	<h1>Nossos produtos</h1>
+	<div class="row" id="linha">
+		<? foreach ($data as $item):  ?>
+			<div class="col-sm-4">
+				<div class="card my-2">
+				<img src="<?=$item['foto'];?>" class="card-img-top" alt="<?= $item['nome']?>">
+					<div class="card-body">
+						<p><?= $item['nome'];?></p>
+						<p><?= $item['valor'];?></p>
 					</div>
-				<? endforeach; ?>
+				</div>
 			</div>
+			<? endforeach; ?>
 		</div>
-	</body>
-</html>
+	</div>
+<? include('./partials/footer.php'); ?>
