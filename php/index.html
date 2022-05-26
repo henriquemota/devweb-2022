@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formulário com server side</title>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function (e) {
+				const dados = document.getElementById('dados')
+
+				axios.get('./data.php').then(({ data }) =>
+					data.forEach((e) => {
+						const option = document.createElement('option')
+						option.value = e
+						option.text = e
+						dados.add(option)
+					})
+				)
+			})
+		</script>
+	</head>
+	<body>
+		<form action="./form.php">
+			<select id="dados" name="'opcao">
+				<option value=""></option>
+			</select>
+			<button type="submit">enviar</button>
+		</form>
+	</body>
+</html>
