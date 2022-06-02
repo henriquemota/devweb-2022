@@ -22,10 +22,10 @@
 	<body>
 
 		<header class='bg-red'>
-			<div class='container-fluid'>
+			<div class='container'>
 				<div>
 					<div class='row'>
-						<div class='col-sm-6'>
+						<div class='col-sm-4'>
 							<img src='./assets/logo.png' />
 						</div>
 						<div class='col'>

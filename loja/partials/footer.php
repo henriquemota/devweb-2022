@@ -3,7 +3,7 @@
 				array('nome' => 'home', 'endereco' => './'),
 				array('nome' => 'login', 'endereco' => './login.php'),
 				array('nome' => 'registre-se', 'endereco' => './registre-se.php'),
-				array('nome' => 'meu carrinho', 'endereco' => './meu-carrinho.php'),
+				array('nome' => 'carrinho', 'endereco' => './meu-carrinho.php'),
 			]
 		?>
 

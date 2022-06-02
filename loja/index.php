@@ -1,4 +1,4 @@
-<? include('./partials/header.php'); ?>
+<? include_once('./partials/header.php'); ?>
 
 <?
 	$produtos = [
@@ -11,13 +11,7 @@
 ?>
 
 <div class='container my-3'>
-
-	<form>
-	<div class="input-group input-group-lg">
-		<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder='refine sua busca' />
-		<button class='btn btn-primary'>pesquisar</button>
-	</div>
-	</form>
+	<? include('./partials/search.php')?>
 
 	<div class='row'>
 		<? foreach ($produtos as $item):  ?>
@@ -38,5 +32,5 @@
 	</div>
 </div>
 
-<? include('./partials/footer.php'); ?>
+<? include_once('./partials/footer.php'); ?>
 	
