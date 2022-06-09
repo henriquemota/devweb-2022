@@ -10,9 +10,9 @@
   <h1>Primeira página em php</h1>
 
   <?php 
-    $con_string = "host=0.0.0.0 port=5432 dbname=estacio user=henriquemota password=";
-    $bdcon = pg_connect($con_string);
-  
+    $con = "host=172.18.14.46 port=5432 dbname=estacio user=henriquemota password=";
+    $bdcon = pg_connect($con);
+    var_dump($bdcon)
   ?>
 
 </body>
