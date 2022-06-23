@@ -10,9 +10,24 @@
   <h1>Primeira página em php</h1>
 
   <?php 
-    $con = "host=172.18.14.46 port=5432 dbname=estacio user=henriquemota password=";
-    $bdcon = pg_connect($con);
-    var_dump($bdcon)
+    $str = "host=172.20.10.2 port=5432 dbname=estacio user=henriquemota password=";
+    $conn = pg_connect($str);
+
+
+    $data = pg_query($conn, 'select * from clientes');
+    if (!$data) echo 'erro';
+
+
+    while ($row = pg_fetch_assoc($data) ){
+      echo "
+            <p>".$row['id']."</p>
+            <p>".$row['nome']."</p>
+           ";
+    }
+
+    $row = pg_fetch_row($data);
+    var_dump($row);
+
   ?>
 
 </body>
